@@ -32,7 +32,7 @@ ldict = {
 }
 ```
 
-In the above example, ```item1``` is assigned two categories in the ground-truth: ```gray``` and ```black```. For the case of ```item6``` and ```item7```, both are assigned the single annotation ```dashed```. This representation supports representation of both overlapping and non-overlapping ground-truth data.
+In the above example, ```item1``` is assigned two categories in the ground-truth: ```gray``` and ```black```. For the case of ```item6``` and ```item7```, both are assigned the single annotation ```dashed```. This representation supports modelling overlapping and non-overlapping ground-truth data.
 
 The **clustering output** to be evaluated is called the ```cdict``` and is also represented as a dictionary in the same way as the ```ldict```. In this case, the keys are items in the clustering output and the values are the sets of assigned clusters for those items. For example:
 
@@ -48,7 +48,7 @@ cdict = {
 }
 ```
 
-Please note that the clusters names (or IDs) **do not need** to be the same as in the ground-truth data because the algorithm only cares for the groupings, not matching the names of clusters and categories.
+Please note that the clusters names (or IDs) **do not need** to be the same as in the ground-truth data because the algorithm only considers the groupings, it does not try to match the names of clusters to the ground-truth categories.
 
 Once you have defined the ```ldict``` (ground-truth data) and the ```cdict``` (clustering output to evaluate), you can simply do the following to obtain the extended BCubed precision and recall metric values:
 
