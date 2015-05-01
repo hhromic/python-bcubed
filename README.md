@@ -57,10 +57,19 @@ import bcubed
 
 precision = bcubed.precision(cdict, ldict)
 recall = bcubed.recall(cdict, ldict)
+fscore = bcubed.fscore(precision, recall)
 ```
 
-A more complete example can be found in the included ```example.py``` file, where the examples of the source work in [1] are used.
+You can see that also is included an **F-score** [2] (also called F-measure) function for your convenience. This function accepts non-standard values for the beta parameter if you need, as follows:
+
+```python
+fscore = bcubed.fscore(precision, recall, beta=2.0)  # weights recall higher
+fscore = bcubed.fscore(precision, recall, beta=0.5)  # weights precision higher
+```
+
+A complete example can be found in the included ```example.py``` file, where the examples of the source work in [1] are used.
 
 ## References
 
 [1] Amigó, Enrique, et al.: A comparison of Extrinsic Clustering Evaluation Metrics based on Formal Constraints. In: Information Retrieval 12.4 (2009): 461-486. ([download link](http://nlp.uned.es/docs/amigo2007a.pdf))
+[2] http://en.wikipedia.org/wiki/F1_score
