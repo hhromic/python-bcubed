@@ -21,7 +21,9 @@ def compute(title, cdict, ldict):
     """Compute extended BCubed precision and recall, and print the results."""
     precision = bcubed.precision(cdict, ldict)
     recall = bcubed.recall(cdict, ldict)
-    print "{}: precision={:.2f}, recall={:.2f}".format(title, precision, recall)
+    fscore = bcubed.fscore(precision, recall)
+    print "{}: precision={:.2f}, recall={:.2f}, fscore={:.2f}".format(
+        title, precision, recall, fscore)
 
 # example ground-truth data (ldict)
 ground_truth = {
