@@ -63,4 +63,4 @@ A more complete example can be found in the included ```example.py``` file, wher
 
 ## References
 
-[1] Amigó, Enrique, et al.: A comparison of extrinsic clustering evaluation metrics based on formal constraints. In: Information Retrieval 12.4 (2009): 461-486.
+[1] Amigó, Enrique, et al.: A comparison of Extrinsic Clustering Evaluation Metrics based on Formal Constraints. In: Information Retrieval 12.4 (2009): 461-486. ([download link](http://nlp.uned.es/docs/amigo2007a.pdf))
