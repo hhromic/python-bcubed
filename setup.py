@@ -8,7 +8,7 @@ setup(
   author = "Hugo Hromic",
   author_email = "hhromic@gmail.com",
   url = "https://github.com/hhromic/python-bcubed",
-  download_url = "https://github.com/hhromic/python-bcubed/tarball/1.1",
+  download_url = "https://github.com/hhromic/python-bcubed/tarball/1.2",
   install_requires = ["numpy"],
   keywords = ["bcubed", "clustering", "evaluation"],
   classifiers = [],
