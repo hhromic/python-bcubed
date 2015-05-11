@@ -2,7 +2,7 @@ from distutils.core import setup
 setup(
   name = "bcubed",
   packages = ["bcubed"],
-  version = "1.1",
+  version = "1.2",
   description = "Simple extended BCubed implementation in Python for clustering evaluation",
   long_description = "Simple extended BCubed implementation in Python for clustering evaluation",
   author = "Hugo Hromic",
@@ -13,4 +13,5 @@ setup(
   keywords = ["bcubed", "clustering", "evaluation"],
   classifiers = [],
   license = "MIT",
+  platforms = ["all"],
 )
