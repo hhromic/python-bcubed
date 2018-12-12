@@ -1,20 +1,20 @@
 # python-bcubed
 
-Simple extended BCubed implementation in Python for (non-)overlapping clustering evaluation. The implemented algorithm is described in detail in [this paper][amigo2007a]:
+Simple extended BCubed implementation in Python for (non-)overlapping clustering evaluation.
+
+More information on BCubed and details of the algorithm can be found in the following publication:
 
 > Amigó, Enrique, et al.: A comparison of Extrinsic Clustering Evaluation Metrics based on Formal Constraints. In: Information Retrieval 12.4 (2009): 461-486.
-
-[amigo2007a]: http://nlp.uned.es/docs/amigo2007a.pdf
 
 ## Installation
 
 You can simply use `pip` (or any similar package manager) for installation:
 
-    $ pip install bcubed
+    pip install bcubed
 
 or, if you prefer a local user installation:
 
-    $ pip install --user bcubed
+    pip install --user bcubed
 
 ## Usage
 
@@ -60,13 +60,28 @@ recall = bcubed.recall(cdict, ldict)
 fscore = bcubed.fscore(precision, recall)
 ```
 
-You can see that also is included an [**F-score**][f1score] (also called F-measure) function for your convenience. This function accepts non-standard values for the beta parameter if you need, as follows:
+There is also included an [F-score](http://en.wikipedia.org/wiki/F1_score) (also called F-measure) function for your convenience. This function accepts non-standard values for the beta parameter if you need, as follows:
 
 ```python
 fscore = bcubed.fscore(precision, recall, beta=2.0)  # weights recall higher
 fscore = bcubed.fscore(precision, recall, beta=0.5)  # weights precision higher
 ```
 
-A complete example can be found in the included `example.py` file, where the examples of the source work are used.
+A complete example can be found in the included `example.py` file, where the examples of the source publication are used.
 
-[f1score]: http://en.wikipedia.org/wiki/F1_score
+## License
+
+This software is under the **Apache License 2.0**.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
