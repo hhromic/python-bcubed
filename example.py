@@ -1,19 +1,31 @@
-#!/usr/bin/env python
+# Simple extended BCubed implementation in Python for clustering evaluation
+# Copyright 2015 Hugo Hromic
 #
-# cdict: dictionary representing a particular clustering output
-# ldict: dictionary representing the ground-truth or gold-standard data
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
 #
-# Format for both dictionaries:
-# item -> set of assigned clusters/real categories
+#     http://www.apache.org/licenses/LICENSE-2.0
 #
-# The values are sets to support overlapping clustering and ground-truth categories.
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 #
-# Examples and extended BCubed computation taken from:
-# Amigo, Enrique, et al. "A comparison of extrinsic clustering evaluation
-# metrics based on formal constraints."
-# Information retrieval 12.4 (2009): 461-486.
+# Extended BCubed algorithm taken from:
+# Amigo, Enrique, et al. "A comparison of extrinsic clustering evaluation metrics
+# based on formal constraints." Information retrieval 12.4 (2009): 461-486.
 
-"""Examples for computing extended BCubed."""
+"""Examples for computing extended BCubed.
+
+   cdict: dictionary representing a particular clustering output
+   ldict: dictionary representing the ground-truth or gold-standard data
+
+   Format for both dictionaries: {item: set of assigned clusters/real categories}
+
+   The values are sets to support overlapping clustering and ground-truth categories.
+"""
 
 import bcubed
 
@@ -22,8 +34,8 @@ def compute(title, cdict, ldict):
     precision = bcubed.precision(cdict, ldict)
     recall = bcubed.recall(cdict, ldict)
     fscore = bcubed.fscore(precision, recall)
-    print "{}: precision={:.2f}, recall={:.2f}, fscore={:.2f}".format(
-        title, precision, recall, fscore)
+    print("{}: precision={:.2f}, recall={:.2f}, fscore={:.2f}".format(
+        title, precision, recall, fscore))
 
 # example ground-truth data (ldict)
 ground_truth = {
