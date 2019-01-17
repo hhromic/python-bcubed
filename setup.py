@@ -3,7 +3,7 @@
 from setuptools import setup, find_packages
 
 NAME = "bcubed"
-VERSION = "1.4"
+VERSION = "1.5"
 DESCRIPTION = "Simple extended BCubed implementation in Python for clustering evaluation"
 AUTHOR = "Hugo Hromic"
 AUTHOR_EMAIL = "hhromic@gmail.com"
