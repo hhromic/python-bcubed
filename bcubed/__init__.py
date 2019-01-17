@@ -23,5 +23,15 @@ from bcubed.extended import precision
 from bcubed.extended import recall
 
 def fscore(p_val, r_val, beta=1.0):
-    """Computes the F_{beta}-score of given precision and recall values."""
+    """Computes the F_{beta}-score of given precision and recall values.
+
+    Parameters
+    ==========
+    p_val: float
+        The precision value to use for the F-score
+    r_val: float
+        The recall value to to use for the F-score
+    beta: float
+        The beta parameter for computing the F-score
+    """
     return (1.0 + beta**2) * (p_val * r_val / (beta**2 * p_val + r_val))

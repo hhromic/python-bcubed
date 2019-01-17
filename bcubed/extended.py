@@ -33,7 +33,7 @@ def mult_recall(el1, el2, cdict, ldict):
 
 def precision(cdict, ldict):
     """Computes overall extended BCubed precision for the C and L dicts.
-    
+
     Parameters
     ==========
     cdict: dict(item: set(cluster-ids))
@@ -46,7 +46,7 @@ def precision(cdict, ldict):
 
 def recall(cdict, ldict):
     """Computes overall extended BCubed recall for the C and L dicts.
-    
+
     Parameters
     ==========
     cdict: dict(item: set(cluster-ids))
