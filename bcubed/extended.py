@@ -32,11 +32,27 @@ def mult_recall(el1, el2, cdict, ldict):
         / float(len(ldict[el1] & ldict[el2]))
 
 def precision(cdict, ldict):
-    """Computes overall extended BCubed precision for the C and L dicts."""
+    """Computes overall extended BCubed precision for the C and L dicts.
+    
+    Parameters
+    ==========
+    cdict: dict(item: set(cluster-ids))
+        The cluster assignments to be evaluated
+    ldict: dict(item: set(cluster-ids))
+        The ground truth clustering
+    """
     return numpy.mean([numpy.mean([mult_precision(el1, el2, cdict, ldict) \
         for el2 in cdict if cdict[el1] & cdict[el2]]) for el1 in cdict])
 
 def recall(cdict, ldict):
-    """Computes overall extended BCubed recall for the C and L dicts."""
+    """Computes overall extended BCubed recall for the C and L dicts.
+    
+    Parameters
+    ==========
+    cdict: dict(item: set(cluster-ids))
+        The cluster assignments to be evaluated
+    ldict: dict(item: set(cluster-ids))
+        The ground truth clustering
+    """
     return numpy.mean([numpy.mean([mult_recall(el1, el2, cdict, ldict) \
         for el2 in cdict if ldict[el1] & ldict[el2]]) for el1 in cdict])
